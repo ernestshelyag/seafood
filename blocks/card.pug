@@ -1,0 +1,66 @@
+extends _assets/template
+
+block title
+    title main
+
+block header
+    +header()(class="header-top")
+
+block content
+    +b.MAIN.card
+        +b.DIV.breadcrumbs
+            +e.DIV.wrp
+                +e.A.item(href="catalog.html") Каталог товаров
+                +e.SPAN.item.breadcrumbs__item_slash /
+                +e.A.item(href="catalog-lev-2.html") Морепродукты
+                +e.SPAN.item.breadcrumbs__item_slash /
+                +e.A.item(href="catalog-lev-3.html") Рыба охлажденная
+                +e.SPAN.item.breadcrumbs__item_slash /
+                +e.SPAN.item Креветки
+
+        +b.SECTION.card-block
+            +title("Карп охлажденный непотрошеный с/г 1 кг")
+            +e.DIV.wrp
+                +e.DIV.container
+                    +e.DIV.top-block
+                        +e.DIV.img-block
+                            +e.IMG.img(src="img/card-item.jpg")
+                        +b.UL.card-info-block
+                            +e.LI.item
+                                +e.DIV.name-block
+                                    span Цена
+                                +e.DIV.info.card-info-block__info_price
+                                    span
+                                        | 250,00
+                                        ins p
+                            +e.LI.item
+                                +e.DIV.name-block
+                                    span Вес
+                                +e.DIV.info
+                                    span 1.5 кг
+                            +e.LI.item
+                                +e.DIV.name-block
+                                    span Страна
+                                +e.DIV.info
+                                    span Гренландия
+                            +e.LI.item
+                                +e.DIV.name-block
+                                    span Упаковка
+                                +e.DIV.info
+                                    span пакет
+                            +e.LI.item
+                                +e.DIV.name-block
+                                    span Условия хранения
+                                +e.DIV.info
+                                    span 12 месяцев при температуре -18С°
+                    +e.DIV.text-block
+                        p Карп - это признанная во всём мире рыба. В некоторых странах её готовят на Рождество и подают фаршированную орехами или грибами, обильно сдабривая сметанным соусом. В Европе карпа чаще запекают в фольге с овощами или отваривают с большим количеством специй в пиве. Вы можете купить охлаждённого карпа с доставкой на дом в нашем интернет – магазине. Его нежное, вкусное, сладковатое мясо идеально подходит для приготовления супов, пирогов, рулетов или запекания на углях. Мясо карпа богато витаминами, аминокислотами и минеральными веществами. Оно легко усваивается и относится к диетическим продуктам. Незаменимо для щитовидной железы, улучшения памяти и зрения.Внимание!Цена за фасованный товар указана с учетом максимально возможного веса фасовки.Итоговая стоимость может отличаться в меньшую сторону и указывается в товарном чеке.
+                                    
+        +b.SECTION.recomend
+            +title("Рекомендуемые товары")
+            +main-slider()(class="main-slider")
+                +slide()
+                +slide()
+                +slide()
+                +slide()
+                +slide()

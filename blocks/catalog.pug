@@ -1,0 +1,38 @@
+extends _assets/template
+
+block title
+    title catalog
+
+block header
+    +header()(class="header-top")
+
+block content
+    +b.MAIN.catalog-page
+        +title("Каталог")
+        +e.DIV.wrp
+            +e.DIV.container
+                +e.A.item(href="catalog-lev-2.html")
+                    +e.SPAN.img-block
+                        +e.IMG.img(src="img/catalog-item.jpg")
+                    +e.SPAN.btn-block
+                        +btn-line("Лобстер")
+                +e.DIV.item(href="#")
+                    +e.SPAN.img-block
+                        +e.IMG.img(src="img/bot.jpg")
+                    +e.SPAN.btn-block
+                        +btn-line("Лобстер")
+                +e.A.item(href="#")
+                    +e.SPAN.img-block
+                        +e.IMG.img(src="img/test.jpg")
+                    +e.SPAN.btn-block
+                        +btn-line("Лобстер")
+                +e.A.item(href="#")
+                    +e.SPAN.img-block
+                        +e.IMG.img(src="img/catalog-item.jpg")
+                    +e.SPAN.btn-block
+                        +btn-line("Лобстер")
+                +e.A.item(href="#")
+                    +e.SPAN.img-block
+                        +e.IMG.img(src="img/catalog-item.jpg")
+                    +e.SPAN.btn-block
+                        +btn-line("Лобстер")

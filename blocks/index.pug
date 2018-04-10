@@ -1,0 +1,126 @@
+extends _assets/template
+
+block title
+    title main
+
+block header
+    +header()(class="header-main-page header-top")
+
+block content
+    +b.MAIN.main
+        +top-slider()
+        +b.SECTION.new
+            +title("Новинки")
+            +main-slider()(class="main-slider")
+                +slide()
+                +slide()
+                +slide()
+                +slide()
+                +slide()
+                +slide()
+                +slide()
+
+        +b.SECTION.about
+            +title("О компании")(class="color")
+            +e.DIV.wrp
+                +e.DIV.text-block
+                    p
+                        | Почему мы создали этот магазин? Мы просто стали задумываться над тем, что важно для нас самих и для многих людей, которые нас окружают. Ответ для нас был очевиден: нужны свежие натуральные продукты. Потому что именно их сейчас не хватает и трудно найти на полках супермаркетов. При всем обилии красивых упаковок и сниженных цен найти что-то действительно свежее, натуральное и при этом не запредельно дорогое - не так просто!
+                        br
+                        br
+                        | Почему так происходит? Потому что с такими продуктами сложно - они быстро портятся и не могут храниться долго на полках магазинов.
+                        br
+                        br
+                        | Зато в них нет консервантов и они не видоизменяются при приготовлении как купленное в универсаме недорогое мясо. Вобщем, они получаются вкуснее, полезнее и выгоднее в конечном итоге. Чтобы продукты были действительно свежими их надо не хранить, а сразу доставлять тем кому они нужны. Такие продукты вкусные, полезные и они помогут Вам изменить качество жизни в лучшую сторону!
+        +b.SECTION.catalog
+            +title("Каталог товаров")
+            +e.DIV.wrp
+                +e.DIV.container
+                    +e.A.item(href="#")
+                        +e.DIV.img(style="background-image: url(../img/test-sq.jpg)")
+                        +e.DIV.text-block
+                            +btn-line("Лобстер")
+                    +e.A.item(href="#")
+                        +e.DIV.img(style="background-image: url(../img/test-sq.jpg)")
+                        +e.DIV.text-block
+                            +btn-line("Копченая рыба")
+                    +e.A.item(href="#")
+                        +e.DIV.img(style="background-image: url(../img/test-sq.jpg)")
+                        +e.DIV.text-block
+                            +btn-line("Мидии")
+                    +e.A.item(href="#")
+                        +e.DIV.img(style="background-image: url(../img/test-sq.jpg)")
+                        +e.DIV.text-block
+                            +btn-line("Морской гребешок Морс гребешок")
+            +e.A.link.btn(href="catalog.html") Показать весь каталог
+        +b.SECTION.recomend
+            +title("Рекомендуемые товары")
+            +main-slider()(class="second-slider")
+                +slide()
+                +slide()
+                +slide()
+                +slide()
+                +slide()
+        +b.SECTION.contact
+            +title("Контакты")
+            +e.DIV.map-block
+                +e.DIV.map-container
+                    +e.DIV.map#map
+                +e.DIV.wrp
+                    +b.DIV.contact-info-block
+                        +e.IMG.img(src="../img/map.svg")
+                        +e.DIV.item
+                            +e.SPAN.title Наш адрес:
+                            +e.P.text
+                                | 191023 , Санкт-Петербург,
+                                br
+                                | Садовая ул., 26, офис 245
+                        +e.DIV.item
+                            +e.SPAN.title График работы:
+                            +e.P.text
+                                | в рабочие дни с 09:00 до 18:00
+                                br
+                                | в субботу - с 09:00 до 13:00
+                                br
+                                | воскресенье - выходной
+block footer
+    +footer()(class="footer-main-page")
+
+block scripts
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+    script.
+         ymaps.ready(init);
+         var myMap;
+
+         function init(){
+             myMap = new ymaps.Map("map", {
+                 center: [59.931632, 30.336528],
+                 zoom: 17
+             });
+
+             var myPlacemark = new ymaps.Placemark([59.931551, 30.331827], {}, {
+                 iconLayout: 'default#image',
+                 iconImageHref: '/img/mark.svg',
+                 iconImageSize: [50, 50],
+                 iconImageOffset: [-3, -42],
+                 hintContent: 'Salmon Store',
+                 balloonContent: 'Санкт-Петербург, ул. Садовая, д.23'
+             });
+
+             myMap.geoObjects.add(myPlacemark);
+
+             myMap.controls
+                 .remove('Button')
+                 .remove('fullscreenControl')
+                 .remove('typeSelector')
+                 .remove('geolocationControl')
+                 .remove('searchControl')
+                 .remove('trafficControl')
+                 .remove('rulerControl')
+                 .remove('zoomControl');
+
+             myMap.behaviors.disable([
+                 'scrollZoom'
+             ])
+         }
+

@@ -1,0 +1,225 @@
+.header
+  background: $main-color
+  position: relative
+  &__wrp
+    +wrp
+    overflow: hidden
+    background: $main-color
+    z-index: 100
+    position: relative
+  &__container
+    height: 120px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +tr
+    +rt
+      height: 70px
+  &__logo-block
+    background: #fff
+    height: 100%
+    width: 153px
+    position: relative
+    +rt
+      background: #fff
+  &__logo
+    +zero
+    max-width: 140px
+    max-height: 100px
+    width: auto
+    height: auto
+    +rt
+      max-height: 65px
+
+  &__menu-btn-hidden-block
+    display: none
+    //&:before
+    //  display: none
+    //  content: ""
+    //  position: fixed
+    //  top: 325px
+    //  left: 0
+    //  right: 0
+    //  bottom: 0
+    //  z-index: 0
+    //&.active::before
+    //  display: block
+    +r(530)
+      display: block
+
+  &__menu-btn-hidden
+    display: block
+    width: 40px
+    height: 40px
+    cursor: pointer
+    +psevdo
+    &:before, &:after
+      width: 100%
+      height: 3px
+      background: #fff
+      left: 0
+      transition: all cubic-bezier(.08,.88,.26,.93) .5s
+    &:before
+      top: 14px
+    &:after
+      bottom: 14px
+    &.active
+      &:before
+        top: 18px
+        transform: rotate(45deg)
+      &:after
+        bottom: 18px
+        transform: rotate(315deg)
+  &__link
+    height: 100%
+    border-top: solid 4px transparent
+    border-bottom: solid 4px transparent
+    +r(530)
+      display: none
+    +psevdo
+    &:after, &:before
+      width: 10px
+      left: 0
+      right: 0
+      margin: auto
+      border: solid 15px transparent
+      +tr
+    &:after
+      bottom: -14px
+      border-bottom: solid 10px #fff
+    &:before
+      top: -14px
+      border-top: solid 10px transparent
+    &:hover::after
+      bottom: -4px
+    &:hover::before
+      top: -4px
+    &_phone
+      border-top: solid 4px $main-color-orange
+      border-bottom: solid 4px $main-color-orange
+      +rt
+        border-top: solid 4px transparent
+        border-bottom: solid 4px transparent
+      &:hover
+        border-top: solid 4px transparent
+        border-bottom: solid 4px transparent
+  &__text
+    color: #fff
+    line-height: 116px
+    +tr
+    +r(900)
+      font-size: 13px
+    +rt
+      line-height: 64px
+    &_mail, &_phone
+      padding: 0 0 0 40px
+      +rm
+        width: 33px
+        display: block
+        overflow: hidden
+        height: 100%
+        padding: 0
+        color: transparent
+      +psevdo
+      &:before
+        top: 0
+        bottom: 0
+        left: 0
+        margin: auto
+        width: 31px
+        height: 31px
+        +cover
+    &_mail::before
+      background-image: url("../img/mail.svg")
+    &_phone::before
+      background-image: url("../img/phone.svg")
+
+
+.header-main-page
+  .header__logo-block
+    background: $main-color-light
+    +rt
+      background: #fff
+  .header__link::after
+    border-bottom: solid 10px $main-color-light
+    +rt
+      border-bottom: solid 10px #fff
+.header-footer-part
+  .header__logo-block
+    background: $main-color-light
+  +r(530)
+    height: 0
+    display: none
+  .header__link::after
+    border-bottom: solid 10px #424242
+  .header__link::before
+    border-top: solid 10px $main-color-light
+
+.header-top
+  position: fixed
+  z-index: 200
+  left: 0
+  right: 0
+  top: 0
+  opacity: 1
+  +tr
+
+.header-small
+  .header__container
+    height: 70px
+  .header__text
+    line-height: 64px
+  .header__logo-block
+    background: #fff
+  .header__logo
+    max-height: 65px
+  .header__link::after
+    border-bottom: solid 10px transparent
+  .header__link_phone
+    border-top: solid 4px transparent
+    border-bottom: solid 4px transparent
+
+.header-hide
+  top: -70px
+  opacity: 0
+
+.header-menu-hidden
+  position: absolute
+  width: 100%
+  top: -300px
+  left: 0
+  background: $main-color
+  text-align: right
+  padding: 30px 15px 10px
+  z-index: 50
+  transition: all .5s cubic-bezier(0,1.09,.4,1.1)
+  &.active
+    top: 40px
+  &__link
+    display: block
+    border-top: solid 1px #fff
+  &__text
+    color: #fff
+    line-height: 3
+    &_mail, &_phone
+      padding: 0 0 0 40px
+      +psevdo
+      &:before
+        top: 0
+        bottom: 0
+        left: 0
+        margin: auto
+        width: 31px
+        height: 31px
+        +cover
+    &_mail::before
+      background-image: url("../img/mail.svg")
+    &_phone::before
+      background-image: url("../img/phone.svg")
+
+
+
+
+
+
+

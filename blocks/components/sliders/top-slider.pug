@@ -1,0 +1,37 @@
+mixin top-slider()
+    +b.DIV.hero
+        +e.DIV.wrp
+            +e.DIV.ars
+            +b.DIV.top-slider
+                +e.DIV.slide
+                    +e.DIV.block
+                        +e.DIV.item
+                            +e.DIV.text
+                                p Угорь морской горячего копчения замороженный (Китай) 1 кг
+                        +e.A.item.top-slider__item_img(href="#")
+                            +e.IMG.img(src="img/unagi.png")
+                        +e.DIV.item
+                            +e.DIV.price
+                                span
+                                    | 670,00
+                                    ins i
+                                +e.DIV.old-price
+                                    p
+                                        | 990,00
+                                        ins i
+                +e.DIV.slide
+                    +e.DIV.block
+                        +e.DIV.item
+                            +e.DIV.text
+                                p Бобер охлажденный (Южная Корея) 1 кг.
+                        +e.A.item.top-slider__item_img(href="#")
+                            +e.IMG.img(src="img/bob.jpg")
+                        +e.DIV.item
+                            +e.DIV.price
+                                span
+                                    | 9999,00
+                                    ins i
+                                +e.DIV.old-price
+                                    p
+                                        | 150,00
+                                        ins i

@@ -1,0 +1,10 @@
+mixin title(name)
+    +b.DIV.title
+        +e.DIV.wrp
+            +e.H1.text(class!=attributes.class)= name
+
+mixin btn-line(name)
+    +b.SPAN.btn-line
+        +e.SPAN.box
+            +e.SPAN.text
+                span= name

@@ -1,0 +1,20 @@
+{
+  "name": "gulp-temp_2.0",
+  "description": "gulp_pug_sass_bem",
+  "main": "index.js",
+  "authors": "Eric <shelyag.eric@mail.ru>",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "slick-carousel": "^1.7.1",
+    "normalize-css": "^7.0.0"
+  }
+}

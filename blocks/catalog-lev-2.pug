@@ -1,0 +1,43 @@
+extends _assets/template
+
+block title
+    title seafood
+
+block header
+    +header()(class="header-top")
+
+block content
+    +b.MAIN.catalog-page
+        +b.DIV.breadcrumbs
+            +e.DIV.wrp
+                +e.A.item(href="catalog.html") Каталог товаров
+                +e.SPAN.item.breadcrumbs__item_slash /
+                +e.SPAN.item Морепродукты
+        +title("Морепродукты")
+        +e.DIV.wrp
+            +e.DIV.container
+                +e.A.item(href="catalog-lev-3.html")
+                    +e.SPAN.img-block
+                        +e.IMG.img(src="img/catalog-item.jpg")
+                    +e.SPAN.btn-block
+                        +btn-line("Лобстер")
+                +e.DIV.item(href="#")
+                    +e.SPAN.img-block
+                        +e.IMG.img(src="img/bot.jpg")
+                    +e.SPAN.btn-block
+                        +btn-line("Лобстер")
+                +e.A.item(href="#")
+                    +e.SPAN.img-block
+                        +e.IMG.img(src="img/test.jpg")
+                    +e.SPAN.btn-block
+                        +btn-line("Лобстер")
+                +e.A.item(href="#")
+                    +e.SPAN.img-block
+                        +e.IMG.img(src="img/catalog-item.jpg")
+                    +e.SPAN.btn-block
+                        +btn-line("Лобстер")
+                +e.A.item(href="#")
+                    +e.SPAN.img-block
+                        +e.IMG.img(src="img/catalog-item.jpg")
+                    +e.SPAN.btn-block
+                        +btn-line("Лобстер")

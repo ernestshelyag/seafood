@@ -1,0 +1,28 @@
+extends _assets/template
+
+block title
+    title sale
+
+block header
+    +header()(class="header-top")
+
+block content
+    +b.MAIN.sale
+        +b.SECTION.sale-block
+            +title("Акции")
+            +e.DIV.wrp
+                +e.DIV.container
+                    +e.A.img-block(href="#")
+                        +e.IMG.img(src="img/sale.jpg")
+                    +e.A.img-block(href="#")
+                        +e.IMG.img(src="img/sale.jpg")
+        +b.SECTION.offer
+            +title("Специальные предложения")
+            +main-slider()(class="main-slider")
+                +slide()(class="slide-no-sale")
+                +slide()
+                +slide()
+                +slide()
+                +slide()
+                +slide()
+                +slide()

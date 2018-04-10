@@ -1,0 +1,31 @@
+mixin header()
+    +b.HEADER.header(class!=attributes.class)
+        +b.DIV.header-menu-hidden
+            +e.A.link(href="sale.html")
+                +e.SPAN.text Акцииss
+            +e.A.link(href="catalog.html")
+                +e.SPAN.text Каталог
+            +e.A.link(href="contact.html")
+                +e.SPAN.text Контакты
+            +e.A.link(href="mailto:salmonstore@mail.ru")
+                +e.SPAN.text.header-menu-hidden__text_mail salmonstore@mail.ru
+            +e.A.link(href="tel:+78126744523")
+                +e.SPAN.text.header-menu-hidden__text_phone +7 (812) 674 45 23
+        +e.DIV.wrp
+            +e.DIV.container
+                +e.A.logo-block(href="/")
+                    +e.IMG.logo(src="img/logo.png")
+                +e.A.link(href="sale.html")
+                    +e.SPAN.text Акции
+                +e.A.link(href="catalog.html")
+                    +e.SPAN.text Каталог
+                +e.A.link(href="contact.html")
+                    +e.SPAN.text Контакты
+                +e.A.link(href="mailto:salmonstore@mail.ru")
+                    +e.SPAN.text.header__text_mail salmonstore@mail.ru
+                +e.A.link.header__link_phone(href="tel:+78126744523")
+                    +e.SPAN.text.header__text_phone +7 (812) 674 45 23
+                +e.DIV.menu-btn-hidden-block
+                    +e.SPAN.menu-btn-hidden
+
+

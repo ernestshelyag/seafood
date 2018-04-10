@@ -1,0 +1,172 @@
+.new
+  padding-bottom: 65px
+  +r(1360)
+    padding-bottom: 95px
+
+.recomend
+  +r(1360)
+    padding-bottom: 75px
+
+.about
+  background: $main-color-light
+  &__wrp
+    +wrp
+  &__text-block
+    color: $main-color
+    padding-bottom: em(65)
+    +rm
+      font-size: 14px
+    +r(600)
+      font-size: 12px
+      padding-bottom: 20px
+      font-weight: 600
+
+//----- catalog main page -----
+
+.catalog
+  &__wrp
+    +wrp
+  &__container
+    display: flex
+    +r(1300)
+      flex-direction: column
+  &__item
+    flex-grow: 1
+    display: flex
+    flex-direction: column
+    & > div
+      height: 285px
+    &:nth-child(2n)
+      .catalog__text-block
+        order: -1
+    &:hover
+      .btn-line__box
+        &:before, &:after
+          width: 42px
+      .btn-line__text
+        background: $main-color
+        color: #fff
+        &:before, &:after
+          width: 122px
+
+    +rmin(1300)
+      &:nth-child(2n)
+        .catalog__text-block::before
+          left: 0
+          right: 0
+          bottom: -25px
+      &:nth-child(2n - 1)
+        .catalog__text-block::before
+          left: 0
+          right: 0
+          top: -25px
+
+    +r(1300)
+      flex-direction: row
+      border-bottom: solid 1px $main-color
+      & > div
+        height: 226px
+      &:last-child
+        border: none
+      &:nth-child(2n)
+        .catalog__text-block::before
+          top: 0
+          bottom: 0
+          right: -25px
+      &:nth-child(2n - 1)
+        .catalog__text-block::before
+          top: 0
+          bottom: 0
+          left: -25px
+    +rm
+      border-bottom: none
+    +r(530)
+      flex-direction: column
+      & > div
+        height: 166px
+      &:nth-child(2n), &:nth-child(2n - 1)
+        .catalog__text-block
+          order: -1
+
+  &__img
+    +cover
+    +r(1300)
+      width: 40%
+    +rm
+      width: 50%
+    +r(530)
+      width: 100%
+  &__text-block
+    flex-grow: 1
+    background: $main-color-light
+    +psevdo
+    &:before
+      width: 50px
+      height: 50px
+      background: $main-color-light
+      transform: rotate(45deg)
+      margin: auto
+    +r(645)
+      & > div
+        width: 80%
+    +r(530)
+      & > div
+        width: 65%
+      &:before
+        display: none
+
+  &__link
+    margin: 65px auto 20px
+    +rm
+      margin: 30px auto 20px
+
+//----- catalog main page end -----
+
+.contact
+  &__wrp
+    +wrp
+    height: 100%
+  &__map
+    height: 100%
+  &__map-block
+    height: 485px
+    position: relative
+    +rt
+      height: 400px
+    +zigzag
+  &__map-container
+    position: absolute
+    width: 100%
+    height: 100%
+    background: #dbdbd6
+
+.contact-info-block
+  position: relative
+  z-index: 5
+  background: $main-color-light
+  height: 100%
+  width: 502px
+  float: right
+  text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  align-items: center
+  padding: 40px 0 30px
+  color: $main-color
+  +rt
+    width: 330px
+  +rm
+    float: none
+    margin: auto
+    width: 290px
+  &__img
+    width: 53px
+    height: 53px
+  &__title
+    display: block
+    font-size: 18px
+    font-weight: 600
+    margin-bottom: 15px
+
+

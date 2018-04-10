@@ -1,0 +1,63 @@
+extends _assets/template
+
+block title
+    title shrimps
+
+block header
+    +header()(class="header-top")
+
+block content
+    +b.MAIN.catalog-page.catalog-items
+        +b.DIV.breadcrumbs
+            +e.DIV.wrp
+                +e.A.item(href="catalog.html") Каталог товаров
+                +e.SPAN.item.breadcrumbs__item_slash /
+                +e.A.item(href="catalog-lev-2.html") Морепродукты
+                +e.SPAN.item.breadcrumbs__item_slash /
+                +e.SPAN.item Креветки
+        +title("Креветки")
+        +e.DIV.wrp
+            +e.DIV.container
+                +e.DIV.item
+                    +b.A.slide-main(href="card.html")
+                        +e.DIV.container
+                            +e.IMG.sale-icon(src="img/percent.svg")
+                            +e.DIV.img-block
+                                +e.IMG.img(src="img/test.jpg")
+                            +e.DIV.text-block
+                                p Икра красная кеты ~ 250 г., новый вылов, Камчатка, 2017 г Икра красная кеты ~ 250 г., новый вылов, Камчатка, 2017 г
+                            +e.DIV.price-block
+                                span
+                                    | 450,00
+                                    ins i
+                                +e.DIV.old-price
+                                    p
+                                        | 990,00
+                                        ins i
+                +e.DIV.item
+                    +slide()
+                +e.DIV.item
+                    +slide()
+                +e.DIV.item
+                    +slide()
+                +e.DIV.item
+                    +slide()
+                +e.DIV.item
+                    +slide()
+                +e.DIV.item
+                    +slide()
+                +e.DIV.item
+                    +slide()
+                +e.DIV.item
+                    +slide()
+                +e.DIV.item
+                    +slide()
+                +e.DIV.item
+                    +slide()
+
+
+
+
+
+
+

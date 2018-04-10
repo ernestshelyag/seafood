@@ -1,0 +1,108 @@
+.hero
+  background: $main-color-light
+  padding: 65px 0
+  +rt
+    display: none
+  &__wrp
+    +wrp
+    position: relative
+
+    .slick-arrow
+      border: none
+      background: transparent
+      position: relative
+      width: 17px
+      height: 52px
+      z-index: 100
+      cursor: pointer
+      outline: none
+      +tr
+      &:hover
+        transform: scale(1.3)
+
+  &__ars
+    +coverdiv
+    padding: 0 50px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.top-slider-arrow-next
+  border: 26px solid transparent
+  border-left: 17px solid $main-color-orange
+  +coverdiv
+  &:before
+    content: ""
+    border: 26px solid transparent
+    border-left: 17px solid $main-color-light
+    position: absolute
+    top: -26px
+    left: -20px
+    width: 100%
+    height: 100%
+
+.top-slider-arrow-prev
+  border: 26px solid transparent
+  border-right: 17px solid $main-color-orange
+  position: absolute
+  width: 100%
+  height: 100%
+  top: 0
+  left: -26px
+  &:before
+    content: ""
+    border: 26px solid transparent
+    border-right: 17px solid $main-color-light
+    position: absolute
+    top: -26px
+    left: -23px
+    width: 100%
+    height: 100%
+
+.top-slider
+  height: 226px
+  overflow: hidden
+  &__slide
+    outline: none
+  &__block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0 120px
+  &__item
+    &_img
+      position: relative
+      width: 258px
+      height: 226px
+  &__text
+    max-width: em(258, 22)
+    font-size: 22px
+    color: #4b4b4b
+    +r(1240)
+      font-size: 18px
+  &__img
+    +zero
+    max-width: 258px
+    max-height: 226px
+  &__price
+    position: relative
+    font-size: 60px
+    color: $main-color-orange
+    +r(1240)
+      font-size: 40px
+  &__old-price
+    font-size: em(28, 60)
+    color: $main-color-gray
+    position: absolute
+    right: 0
+    bottom: -50px
+    p
+      +psevdo
+      &:before
+        width: 110%
+        height: 1px
+        background: $main-color-gray
+        top: 3px
+        bottom: 0
+        left: -5px
+        margin: auto

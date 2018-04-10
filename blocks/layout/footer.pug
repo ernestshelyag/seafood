@@ -1,0 +1,34 @@
+mixin footer()
+  +b.FOOTER.footer(class!=attributes.class)
+    +e.DIV.top-block
+      +e.DIV.wrp
+        +e.IMG.img(src="img/what.png")
+        +e.DIV.text-block
+          +e.P.text Не знаете, что приготовить? Или хотите разнообразить меню для семьи? Перекусить с коллегами? Выход есть!
+          +e.P.text
+            span «Что готовить?»
+            | — гастрономический сервис по доставке продуктов для приготовления вкуснейших ужинов, а также уже готовых блюд, будет рад помочь Вам в решении гастрономического вопроса. Приглашаем Вас познакомиться с нашим вкусным и разнообразным меню.
+          +e.P.text Мы ценим наших клиентов и сделаем все, чтобы освободить Ваше драгоценное время. Вы забудете, что ужин — это ежедневная рутинная обязанность. И начнете готовить с удовольствием!
+        +e.A.link.btn(href="#") Узнать, что готовить
+
+    +b.DIV.header.header-footer-part
+      +e.DIV.wrp
+        +e.DIV.container
+          +e.A.logo-block(href="/")
+            +e.IMG.logo(src="img/logo.png")
+          +e.A.link(href="sale.html")
+            +e.SPAN.text Акции
+          +e.A.link(href="catalog.html")
+            +e.SPAN.text Каталог
+          +e.A.link(href="contact.html")
+            +e.SPAN.text Контакты
+          +e.A.link(href="mailto:salmonstore@mail.ru")
+            +e.SPAN.text.header__text_mail salmonstore@mail.ru
+          +e.A.link.header__link_phone(href="tel:+78126744523")
+            +e.SPAN.text.header__text_phone +7 (812) 674 45 23
+          +e.DIV.menu-btn-hidden-block
+            +e.SPAN.menu-btn-hidden
+
+    +e.DIV.bottom-block
+      +e.DIV.wrp
+        +e.SPAN.bottom-text Представленная на сайте информация не является публичной офертой. Все товары представлены для Вашего ознакомления и принятия решения о покупке. Сведения о составе, свойствах и характеристиках товаров, представленных в каталоге сайта, могут быть изменены производителями в одностороннем порядке. Фотографические изображения товаров на сайте могут отличаться от оригиналов.
